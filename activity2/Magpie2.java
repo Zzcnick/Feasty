@@ -48,9 +48,23 @@ public class Magpie2
 		response = "Tell me more about your pets.";
 	    }
 	else if (statement.toLowerCase().indexOf("brown") >= 0
-		 || statement.toLowerCase().indexOf("tofr") >= 0)
+		 || statement.toLowerCase().indexOf("tofr") >= 0
+		 || statement.toLowerCase().indexOf("tbm") >= 0 
+		 || statement.toLowerCase().indexOf("mykolyk") >= 0 )
 	    {
 		response = "He sounds like a great teacher!";
+	    }
+	else if (statement.toLowerCase().indexOf("election") >= 0)
+	    {
+		response = "Get out there and vote! Preferably not for Trump though...";
+	    }
+	else if (statement.toLowerCase().indexOf("calvin") >= 0)
+	    {
+		response = "Keep talking to me about the smartest person in the world!... Nah, jk.";
+	    }
+	else if (statement.toLowerCase().indexOf("ducky") >= 0)
+	    {
+		response = "Quack. CS much?";
 	    }
 	else if (statement.trim().length() == 0)
 	    {
@@ -69,7 +83,7 @@ public class Magpie2
      */
     private String getRandomResponse()
     {
-	final int NUMBER_OF_RESPONSES = 6;
+	final int NUMBER_OF_RESPONSES = 8;
 	double r = Math.random();
 	int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 	String response = "";
@@ -98,7 +112,14 @@ public class Magpie2
 	    {
 		response = "Okay.";
 	    }
-
+	else if (whichResponse == 6)
+	    {
+		response = "Say again?";
+	    }
+	else if (whichResponse == 7)
+	    {
+		response = "Your answer does not compute.";
+	    }
 	return response;
     }
 }
