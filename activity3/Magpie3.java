@@ -16,12 +16,12 @@ public class Magpie3
 	 * @return a greeting
 	 */
 	public String getGreeting()
-	{
+    {
 		return "Hello, let's talk.";
 	}
 
-	/**
-	 * Gives a response to a user statement
+    /**
+     * Gives a response to a user statement
 	 * 
 	 * @param statement
 	 *            the user statement
@@ -45,6 +45,13 @@ public class Magpie3
 		{
 			response = "Tell me more about your family.";
 		}
+		else if (findKeyword(statement.toLowerCase(), "brown") >= 0
+			 || findKeyword(statement.toLowerCase(), "tofr") >= 0
+			 || findKeyword(statement.toLowerCase(), "tbm") >= 0
+			 || findKeyword(statement.toLowerCase(), "mykolyk") >= 0 )
+		    {
+			response = "he sounds like a great teacher!";
+		    }
 		else
 		{
 			response = getRandomResponse();
