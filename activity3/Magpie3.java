@@ -52,6 +52,22 @@ public class Magpie3
 		    {
 			response = "he sounds like a great teacher!";
 		    }
+		else if (findKeyword(statement, "election") >= 0)
+		    {
+			response = "Get out there and vote! Preferably not for Trump though...";
+		    }
+		else if (findKeyword(statement.toLowerCase(), "calvin") >= 0)
+		    {
+			response = "Keep talking to me about the smartest person in the world!... Nah, jk.";
+		    }
+		else if (findKeyword(statement, "ducky") >= 0)
+		    {
+			response = "Quack. CS much?";
+		    }
+		else if (statement.trim().length() == 0)
+		    {
+			response = "Stay sumthing, pls";
+		    }
 		else
 		{
 			response = getRandomResponse();
@@ -147,31 +163,46 @@ public class Magpie3
 	 * 
 	 * @return a non-committal string
 	 */
-	private String getRandomResponse()
-	{
-		final int NUMBER_OF_RESPONSES = 4;
-		double r = Math.random();
-		int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
-		String response = "";
-
-		if (whichResponse == 0)
-		{
-			response = "Interesting, tell me more.";
-		}
-		else if (whichResponse == 1)
-		{
-			response = "Hmmm.";
-		}
-		else if (whichResponse == 2)
-		{
-			response = "Do you really think so?";
-		}
-		else if (whichResponse == 3)
-		{
-			response = "You don't say.";
-		}
-
-		return response;
-	}
-
+    private String getRandomResponse()
+    {
+	final int NUMBER_OF_RESPONSES = 8;
+	double r = Math.random();
+	int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
+	String response = "";
+		
+	if (whichResponse == 0)
+	    {
+		response = "Interesting, tell me more.";
+	    }
+	else if (whichResponse == 1)
+	    {
+		response = "Hmmm.";
+	    }
+	else if (whichResponse == 2)
+	    {
+		response = "Do you really think so?";
+	    }
+	else if (whichResponse == 3)
+	    {
+		response = "You don't say.";
+	    }
+	else if (whichResponse == 4)
+	    {
+		response = "Well then.";
+	    }
+	else if (whichResponse == 5)
+	    {
+		response = "Okay.";
+	    }
+	else if (whichResponse == 6)
+	    {
+		response = "Say again?";
+	    }
+	else if (whichResponse == 7)
+	    {
+		response = "Your answer does not compute.";
+	    }
+	return response;
+    }
+    
 }
