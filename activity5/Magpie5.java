@@ -287,7 +287,7 @@ public class Magpie5
 			"You don't say.",
 			"Can you elaborate?",
 			"l m a o",
-			"Oh."
+			"Oh.",
 			"Please."
 	};
 	
